@@ -23,6 +23,29 @@
         .fade-in {
             animation: fadeIn 1s ease-in-out;
         }
+
+        /* Floating WhatsApp Icon */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+        }
     </style>
 </head>
 
@@ -36,11 +59,15 @@
                 <i class="fas fa-bars text-2xl"></i>
             </button>
             <!-- Navigation -->
-            <nav id="menu" class="hidden md:flex space-x-6 bg-white md:bg-transparent p-4 md:p-0">
-                <a href="#about" class="text-gray-700 hover:text-blue-600">About</a>
-                <a href="#products" class="text-gray-700 hover:text-blue-600">Products</a>
-                <a href="#services" class="text-gray-700 hover:text-blue-600">Services</a>
-                <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+            <nav id="menu"
+                class="hidden md:flex space-x-6 bg-white md:bg-transparent p-4 md:p-0 absolute md:relative top-16 left-0 w-full md:w-auto md:top-0">
+                <a href="#about" class="block text-gray-700 hover:text-blue-600 py-2 md:py-0 mobile-menu-link">About</a>
+                <a href="#products"
+                    class="block text-gray-700 hover:text-blue-600 py-2 md:py-0 mobile-menu-link">Products</a>
+                <a href="#services"
+                    class="block text-gray-700 hover:text-blue-600 py-2 md:py-0 mobile-menu-link">Services</a>
+                <a href="#contact"
+                    class="block text-gray-700 hover:text-blue-600 py-2 md:py-0 mobile-menu-link">Contact</a>
             </nav>
         </div>
     </header>
@@ -83,19 +110,19 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Product Card 1 -->
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <img src="supp.png" alt="Supplements" class="rounded-lg mb-4">
+                    <img src="supp.png" alt="Supplements for health and wellness" class="rounded-lg mb-4">
                     <h3 class="text-xl font-bold mb-4">Supplements</h3>
                     <p class="text-gray-700">Boost your health with our range of premium supplements.</p>
                 </div>
                 <!-- Product Card 2 -->
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <img src="immueb.png" alt="Immune Boosters" class="rounded-lg mb-4">
+                    <img src="immueb.png" alt="Immune Boosters for stronger immunity" class="rounded-lg mb-4">
                     <h3 class="text-xl font-bold mb-4">Immune Boosters</h3>
                     <p class="text-gray-700">Strengthen your immune system with our natural solutions.</p>
                 </div>
                 <!-- Product Card 3 -->
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <img src="skingc.png" alt="Skincare Products" class="rounded-lg mb-4">
+                    <img src="skingc.png" alt="Skincare Products for radiant skin" class="rounded-lg mb-4">
                     <h3 class="text-xl font-bold mb-4">Skincare Products</h3>
                     <p class="text-gray-700">Achieve radiant skin with our scientifically formulated skincare range.</p>
                 </div>
@@ -129,16 +156,18 @@
             <form action="#" method="POST" class="max-w-2xl mx-auto">
                 <div class="mb-4">
                     <label for="name" class="block mb-2">Name</label>
-                    <input type="text" id="name" class="w-full p-2 rounded text-gray-700" placeholder="Your Name">
+                    <input type="text" id="name" class="w-full p-2 rounded text-gray-700" placeholder="Your Name"
+                        required>
                 </div>
                 <div class="mb-4">
                     <label for="email" class="block mb-2">Email</label>
-                    <input type="email" id="email" class="w-full p-2 rounded text-gray-700" placeholder="Your Email">
+                    <input type="email" id="email" class="w-full p-2 rounded text-gray-700" placeholder="Your Email"
+                        required>
                 </div>
                 <div class="mb-4">
                     <label for="message" class="block mb-2">Message</label>
-                    <textarea id="message" class="w-full p-2 rounded text-gray-700" rows="4"
-                        placeholder="Your Message"></textarea>
+                    <textarea id="message" class="w-full p-2 rounded text-gray-700" rows="4" placeholder="Your Message"
+                        required></textarea>
                 </div>
                 <button type="submit"
                     class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all">Send
@@ -171,8 +200,9 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contact Info</h3>
                     <ul class="text-gray-400">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i>123 Health St, Wellness City</li>
-                        <li class="mb-2"><i class="fas fa-phone mr-2"></i>+1238108134538</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i>123 Health St,
+                            Port-Harcourt</Port-Harcourt></li>
+                        <li class="mb-2"><i class="fas fa-phone mr-2"></i>+2348108134538</li>
                         <li class="mb-2"><i class="fas fa-envelope mr-2"></i>info@nuelcare.com</li>
                     </ul>
                 </div>
@@ -180,25 +210,49 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Follow Us</h3>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white" aria-label="Twitter"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2025 Nuelcare. All rights reserved.</p>
+                <p class="text-gray-400">&copy; <span id="year"></span> Nuelcare. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Floating WhatsApp Icon -->
+    <a href="https://wa.me/+2348108134538" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- JavaScript for Mobile Menu and Animations -->
     <script>
         // Mobile Menu Toggle
-        document.getElementById("menu-toggle").addEventListener("click", () => {
-            const menu = document.getElementById("menu");
+        const menuToggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+        const menuLinks = document.querySelectorAll(".mobile-menu-link");
+
+        menuToggle.addEventListener("click", () => {
+            const icon = menuToggle.querySelector("i");
             menu.classList.toggle("hidden");
+            icon.classList.toggle("fa-bars");
+            icon.classList.toggle("fa-times");
+        });
+
+        // Close Mobile Menu When a Link is Clicked
+        menuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                menu.classList.add("hidden");
+                menuToggle.querySelector("i").classList.remove("fa-times");
+                menuToggle.querySelector("i").classList.add("fa-bars");
+            });
         });
 
         // Fade-in Animations
@@ -217,6 +271,9 @@
                 observer.observe(section);
             });
         });
+
+        // Update Copyright Year
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 </body>
 
